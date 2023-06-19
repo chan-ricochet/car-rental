@@ -54,7 +54,7 @@ class Books extends BaseController
                 $this->request->getPost('pages'),
             );
 
-            return redirect()->to('http://localhost:8081/index.php/');
+            return redirect()->to('index.php/');
         } else {
             echo view('templates/header');
             echo view('books/create', ['title' => 'Add a new car']);
@@ -86,7 +86,7 @@ class Books extends BaseController
                 $this->request->getPost('pagesRead'),
             );
 
-            return redirect()->to('http://localhost:8081/index.php/');
+            return redirect()->to('index.php/');
         } else {
             echo view('templates/header', $data);
             echo view('books/edit', $data);
@@ -100,6 +100,6 @@ class Books extends BaseController
             $model->deleteBook($segment);
         }
 
-        return redirect()->to('http://localhost:8081/index.php/');
+        return redirect()->to('index.php/');
     }
 }
