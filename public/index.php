@@ -1,5 +1,5 @@
 <?php
-
+echo "Start index.php";
 // Check PHP version.
 $minPhpVersion = '7.4'; // If you update this, don't forget to update `spark`.
 if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
@@ -31,7 +31,7 @@ chdir(FCPATH);
 // This is the line that might need to be changed, depending on your folder structure.
 require FCPATH . '../app/Config/Paths.php';
 // ^^^ Change this line if you move your application folder
-
+echo "Loading config paths";
 $paths = new Config\Paths();
 
 // Location of the framework bootstrap file.
@@ -50,7 +50,7 @@ require_once SYSTEMPATH . 'Config/DotEnv.php';
  * the application run, and does all the dirty work to get
  * the pieces all working together.
  */
-
+echo "Codeigniter instance";
 $app = Config\Services::codeigniter();
 $app->initialize();
 $context = is_cli() ? 'php-cli' : 'web';
