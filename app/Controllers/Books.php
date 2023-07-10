@@ -41,7 +41,9 @@ class Books extends BaseController
 
     public function create()
     {
+        echo "Entering create";
         $model = model(BooksModel::class);
+        echo "Model success";
 
         if ($this->request->getMethod() === 'post' && $this->validate([
             'title' => 'required|min_length[1]|max_length[255]',
@@ -54,7 +56,7 @@ class Books extends BaseController
                 $this->request->getPost('pages'),
             );
 
-            return redirect()->to('books/');
+            return redirect()->to('/');
         } else {
             echo view('templates/header');
             echo view('books/create', ['title' => 'Add a new car']);
@@ -86,7 +88,7 @@ class Books extends BaseController
                 $this->request->getPost('pagesRead'),
             );
 
-            return redirect()->to('books/');
+            return redirect()->to('/');
         } else {
             echo view('templates/header', $data);
             echo view('books/edit', $data);
@@ -100,6 +102,6 @@ class Books extends BaseController
             $model->deleteBook($segment);
         }
 
-        return redirect()->to('books/');
+        return redirect()->to('/');
     }
 }

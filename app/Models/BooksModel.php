@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+
 use App\Libraries\DatabaseConnector;
+
 
 class BooksModel {
     private $collection;
@@ -15,6 +17,7 @@ class BooksModel {
 
     function getBooks($limit = 10) {
         try {
+            
             $cursor = $this->collection->find([], ['limit' => $limit]);
             $books = $cursor->toArray();
 
@@ -70,7 +73,7 @@ class BooksModel {
 
             return false;
         } catch(\MongoDB\Exception\RuntimeException $ex) {
-            show_error('Error while updating the car with ID: ' . $id . $ex->getMessage(), 500);
+            show_error('Error while updating the with ID: ' . $id . $ex->getMessage(), 500);
         }
     }
 
@@ -84,7 +87,7 @@ class BooksModel {
 
             return false;
         } catch(\MongoDB\Exception\RuntimeException $ex) {
-            show_error('Error while deleting the car with ID: ' . $id . $ex->getMessage(), 500);
+            show_error('Error while deleting a car with ID: ' . $id . $ex->getMessage(), 500);
         }
     }
 }
