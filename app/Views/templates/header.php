@@ -8,9 +8,12 @@
         <!-- Load Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <title>Reading Journal: MongoDB & CodeIgniter CRUD Tutorial</title>
+        <title>Car Rental System: Using MongoDB & CodeIgniter</title>
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <h2 style="width: 100%;text-align:center;"> CAR RENTAL SYSTEM </h2>
+        </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">Car Journal</a>
