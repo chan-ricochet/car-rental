@@ -1,13 +1,14 @@
 <?php
  
 namespace App\Libraries;
+/*
 require('D:\xampp\php\car-rental\vendor\autoload.php');
 
 use Aws\SecretsManager\SecretsManagerClient;
 use Aws\Exception\AwsException;
 use Aws\Sts\StsClient;
 use Aws\Credentials\CredentialProvider;
-use Aws\Credentials\Credentials;
+use Aws\Credentials\Credentials;*/
 
 class DatabaseConnector {
     
@@ -16,6 +17,7 @@ class DatabaseConnector {
 
     function __construct() {
 
+     /*
         $role_arn='arn:aws:iam::056405774272:role/SecretsManagerRole';
         $region="us-west-2";
 
@@ -77,7 +79,9 @@ class DatabaseConnector {
         echo "Yayy";
         $database = $cred->dbname;
         echo $database;
-
+*/
+        $uri = 'mongodb+srv://chan:heythere12@cluster0.qckg31o.mongodb.net/';
+        $database = 'test_db';
         if (empty($uri) || empty($database)) {
             show_error('You need to declare ATLAS_URI and DATABASE in your .env file!');
         }
