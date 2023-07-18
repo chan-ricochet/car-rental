@@ -12,7 +12,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <h2 style="width: 100%;text-align:center;">MY CAR RENTAL SYSTEM </h2>
+                <h2 style="width: 100%;text-align:center;">MY CAR RENTAL SYSTEM - SPIRO AND WISSEN </h2>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
